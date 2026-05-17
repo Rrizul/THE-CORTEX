@@ -592,10 +592,10 @@ with col_stage:
         unsafe_allow_html=True,
     )
 
-    # ── EMPTY STATE ────────────────────────────────────────────────────────────
-    if not results:
-      st.markdown(
-    """
+# ── EMPTY STATE ────────────────────────────────────────────────────────────
+if not results:
+    st.markdown(
+        """
 <div class="stage-title-wrap">
   <div class="stage-eyebrow">Multi-Agent Reasoning System</div>
 
@@ -604,7 +604,11 @@ with col_stage:
 
   <!-- Animated Neural Graph -->
   <div class="neural-wrap">
-    <svg viewBox="0 0 420 270" width="420" height="270" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 420 270"
+         width="420"
+         height="270"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
 
       <defs>
         <filter id="gB" x="-50%" y="-50%" width="200%" height="200%">
@@ -622,214 +626,237 @@ with col_stage:
 
       <!-- Glow haloes -->
       <circle cx="210" cy="80" r="30"
-        fill="#5B8FF9"
-        fill-opacity="0.12"
-        filter="url(#gB)"/>
+              fill="#5B8FF9"
+              fill-opacity="0.12"
+              filter="url(#gB)"/>
 
       <circle cx="110" cy="200" r="24"
-        fill="#F97B8B"
-        fill-opacity="0.12"
-        filter="url(#gP)"/>
+              fill="#F97B8B"
+              fill-opacity="0.12"
+              filter="url(#gP)"/>
 
       <circle cx="310" cy="200" r="24"
-        fill="#5BF9C4"
-        fill-opacity="0.12"
-        filter="url(#gT)"/>
+              fill="#5BF9C4"
+              fill-opacity="0.12"
+              filter="url(#gT)"/>
 
       <!-- Pulse rings -->
-      <circle cx="210" cy="80" r="24"
-        stroke="#5B8FF9"
-        stroke-opacity="0.4"
-        stroke-width="1"
-        fill="none">
+      <circle cx="210" cy="80"
+              r="24"
+              stroke="#5B8FF9"
+              stroke-opacity="0.4"
+              stroke-width="1"
+              fill="none">
 
         <animate attributeName="r"
-          from="24" to="46"
-          dur="2.5s"
-          repeatCount="indefinite"/>
+                 from="24"
+                 to="46"
+                 dur="2.5s"
+                 repeatCount="indefinite"/>
 
         <animate attributeName="opacity"
-          from="0.6" to="0"
-          dur="2.5s"
-          repeatCount="indefinite"/>
+                 from="0.6"
+                 to="0"
+                 dur="2.5s"
+                 repeatCount="indefinite"/>
       </circle>
 
-      <circle cx="110" cy="200" r="20"
-        stroke="#F97B8B"
-        stroke-opacity="0.4"
-        stroke-width="1"
-        fill="none">
+      <circle cx="110" cy="200"
+              r="20"
+              stroke="#F97B8B"
+              stroke-opacity="0.4"
+              stroke-width="1"
+              fill="none">
 
         <animate attributeName="r"
-          from="20" to="38"
-          dur="3s"
-          begin="0.8s"
-          repeatCount="indefinite"/>
+                 from="20"
+                 to="38"
+                 dur="3s"
+                 begin="0.8s"
+                 repeatCount="indefinite"/>
 
         <animate attributeName="opacity"
-          from="0.5" to="0"
-          dur="3s"
-          begin="0.8s"
-          repeatCount="indefinite"/>
+                 from="0.5"
+                 to="0"
+                 dur="3s"
+                 begin="0.8s"
+                 repeatCount="indefinite"/>
       </circle>
 
-      <circle cx="310" cy="200" r="20"
-        stroke="#5BF9C4"
-        stroke-opacity="0.4"
-        stroke-width="1"
-        fill="none">
+      <circle cx="310" cy="200"
+              r="20"
+              stroke="#5BF9C4"
+              stroke-opacity="0.4"
+              stroke-width="1"
+              fill="none">
 
         <animate attributeName="r"
-          from="20" to="38"
-          dur="2.8s"
-          begin="1.4s"
-          repeatCount="indefinite"/>
+                 from="20"
+                 to="38"
+                 dur="2.8s"
+                 begin="1.4s"
+                 repeatCount="indefinite"/>
 
         <animate attributeName="opacity"
-          from="0.5" to="0"
-          dur="2.8s"
-          begin="1.4s"
-          repeatCount="indefinite"/>
+                 from="0.5"
+                 to="0"
+                 dur="2.8s"
+                 begin="1.4s"
+                 repeatCount="indefinite"/>
       </circle>
 
       <!-- Connector lines -->
       <path d="M210,80 L110,200"
-        stroke="#5B8FF9"
-        stroke-opacity="0.28"
-        stroke-width="1.5"
-        stroke-dasharray="5 4">
+            stroke="#5B8FF9"
+            stroke-opacity="0.28"
+            stroke-width="1.5"
+            stroke-dasharray="5 4">
 
         <animate attributeName="stroke-dashoffset"
-          from="36" to="0"
-          dur="2s"
-          repeatCount="indefinite"/>
+                 from="36"
+                 to="0"
+                 dur="2s"
+                 repeatCount="indefinite"/>
       </path>
 
       <path d="M210,80 L310,200"
-        stroke="#F97B8B"
-        stroke-opacity="0.28"
-        stroke-width="1.5"
-        stroke-dasharray="5 4">
+            stroke="#F97B8B"
+            stroke-opacity="0.28"
+            stroke-width="1.5"
+            stroke-dasharray="5 4">
 
         <animate attributeName="stroke-dashoffset"
-          from="36" to="0"
-          dur="2.4s"
-          repeatCount="indefinite"/>
+                 from="36"
+                 to="0"
+                 dur="2.4s"
+                 repeatCount="indefinite"/>
       </path>
 
       <path d="M110,200 L310,200"
-        stroke="#5BF9C4"
-        stroke-opacity="0.2"
-        stroke-width="1.5"
-        stroke-dasharray="4 5">
+            stroke="#5BF9C4"
+            stroke-opacity="0.2"
+            stroke-width="1.5"
+            stroke-dasharray="4 5">
 
         <animate attributeName="stroke-dashoffset"
-          from="0" to="36"
-          dur="3s"
-          repeatCount="indefinite"/>
+                 from="0"
+                 to="36"
+                 dur="3s"
+                 repeatCount="indefinite"/>
       </path>
 
       <!-- Node cores -->
-      <circle cx="210" cy="80" r="24"
-        fill="#0D1828"
-        stroke="#5B8FF9"
-        stroke-opacity="0.7"
-        stroke-width="1.5"/>
+      <circle cx="210" cy="80"
+              r="24"
+              fill="#0D1828"
+              stroke="#5B8FF9"
+              stroke-opacity="0.7"
+              stroke-width="1.5"/>
 
-      <circle cx="110" cy="200" r="20"
-        fill="#0D1828"
-        stroke="#F97B8B"
-        stroke-opacity="0.7"
-        stroke-width="1.5"/>
+      <circle cx="110" cy="200"
+              r="20"
+              fill="#0D1828"
+              stroke="#F97B8B"
+              stroke-opacity="0.7"
+              stroke-width="1.5"/>
 
-      <circle cx="310" cy="200" r="20"
-        fill="#0D1828"
-        stroke="#5BF9C4"
-        stroke-opacity="0.7"
-        stroke-width="1.5"/>
+      <circle cx="310" cy="200"
+              r="20"
+              fill="#0D1828"
+              stroke="#5BF9C4"
+              stroke-opacity="0.7"
+              stroke-width="1.5"/>
 
       <!-- Node labels -->
-      <text x="210" y="86"
-        text-anchor="middle"
-        dominant-baseline="middle"
-        font-size="16"
-        fill="#DDE6FF"
-        style="font-family:sans-serif;">A</text>
+      <text x="210"
+            y="86"
+            text-anchor="middle"
+            dominant-baseline="middle"
+            font-size="16"
+            fill="#DDE6FF"
+            style="font-family:sans-serif;">A</text>
 
-      <text x="110" y="206"
-        text-anchor="middle"
-        dominant-baseline="middle"
-        font-size="16"
-        fill="#DDE6FF"
-        style="font-family:sans-serif;">S</text>
+      <text x="110"
+            y="206"
+            text-anchor="middle"
+            dominant-baseline="middle"
+            font-size="16"
+            fill="#DDE6FF"
+            style="font-family:sans-serif;">S</text>
 
-      <text x="310" y="206"
-        text-anchor="middle"
-        dominant-baseline="middle"
-        font-size="16"
-        fill="#DDE6FF"
-        style="font-family:sans-serif;">F</text>
+      <text x="310"
+            y="206"
+            text-anchor="middle"
+            dominant-baseline="middle"
+            font-size="16"
+            fill="#DDE6FF"
+            style="font-family:sans-serif;">F</text>
 
       <!-- Travelling dots -->
       <circle r="4" fill="#5B8FF9" filter="url(#gB)">
         <animateMotion dur="2.2s"
-          repeatCount="indefinite"
-          path="M210,80 L110,200"/>
+                       repeatCount="indefinite"
+                       path="M210,80 L110,200"/>
       </circle>
 
       <circle r="4" fill="#F97B8B" filter="url(#gP)">
         <animateMotion dur="2.8s"
-          repeatCount="indefinite"
-          begin="0.5s"
-          path="M210,80 L310,200"/>
+                       repeatCount="indefinite"
+                       begin="0.5s"
+                       path="M210,80 L310,200"/>
       </circle>
 
       <circle r="3.5" fill="#5BF9C4" filter="url(#gT)">
         <animateMotion dur="3.2s"
-          repeatCount="indefinite"
-          begin="1s"
-          path="M110,200 L310,200"/>
+                       repeatCount="indefinite"
+                       begin="1s"
+                       path="M110,200 L310,200"/>
       </circle>
 
       <!-- Labels -->
-      <text x="210" y="48"
-        text-anchor="middle"
-        fill="#5B8FF9"
-        fill-opacity="0.7"
-        font-size="9"
-        font-family="JetBrains Mono, monospace"
-        letter-spacing="2">ARCHITECT</text>
+      <text x="210"
+            y="48"
+            text-anchor="middle"
+            fill="#5B8FF9"
+            fill-opacity="0.7"
+            font-size="9"
+            font-family="JetBrains Mono, monospace"
+            letter-spacing="2">ARCHITECT</text>
 
-      <text x="66" y="230"
-        text-anchor="middle"
-        fill="#F97B8B"
-        fill-opacity="0.7"
-        font-size="9"
-        font-family="JetBrains Mono, monospace"
-        letter-spacing="2">SOUL</text>
+      <text x="66"
+            y="230"
+            text-anchor="middle"
+            fill="#F97B8B"
+            fill-opacity="0.7"
+            font-size="9"
+            font-family="JetBrains Mono, monospace"
+            letter-spacing="2">SOUL</text>
 
-      <text x="352" y="230"
-        text-anchor="middle"
-        fill="#5BF9C4"
-        fill-opacity="0.7"
-        font-size="9"
-        font-family="JetBrains Mono, monospace"
-        letter-spacing="2">FILTER</text>
+      <text x="352"
+            y="230"
+            text-anchor="middle"
+            fill="#5BF9C4"
+            fill-opacity="0.7"
+            font-size="9"
+            font-family="JetBrains Mono, monospace"
+            letter-spacing="2">FILTER</text>
 
       <!-- Centre spark -->
-      <circle cx="210" cy="148" r="5"
-        fill="#F9D45B"
-        opacity="0.7">
+      <circle cx="210"
+              cy="148"
+              r="5"
+              fill="#F9D45B"
+              opacity="0.7">
 
         <animate attributeName="r"
-          values="3;8;3"
-          dur="2s"
-          repeatCount="indefinite"/>
+                 values="3;8;3"
+                 dur="2s"
+                 repeatCount="indefinite"/>
 
         <animate attributeName="opacity"
-          values="0.4;1;0.4"
-          dur="2s"
-          repeatCount="indefinite"/>
+                 values="0.4;1;0.4"
+                 dur="2s"
+                 repeatCount="indefinite"/>
       </circle>
 
     </svg>
@@ -837,16 +864,31 @@ with col_stage:
 
   <!-- Prompt starters -->
   <div class="prompt-grid">
-    <div class="prompt-chip"><span class="prompt-chip-icon">💼</span>Should I quit my job to start a business?</div>
-    <div class="prompt-chip"><span class="prompt-chip-icon">🤖</span>What are the real risks of AI replacing jobs?</div>
-    <div class="prompt-chip"><span class="prompt-chip-icon">🏡</span>Buy a house now or wait for prices to drop?</div>
-    <div class="prompt-chip"><span class="prompt-chip-icon">👥</span>How do I handle a toxic team member?</div>
+    <div class="prompt-chip">
+      <span class="prompt-chip-icon">💼</span>
+      Should I quit my job to start a business?
+    </div>
+
+    <div class="prompt-chip">
+      <span class="prompt-chip-icon">🤖</span>
+      What are the real risks of AI replacing jobs?
+    </div>
+
+    <div class="prompt-chip">
+      <span class="prompt-chip-icon">🏡</span>
+      Buy a house now or wait for prices to drop?
+    </div>
+
+    <div class="prompt-chip">
+      <span class="prompt-chip-icon">👥</span>
+      How do I handle a toxic team member?
+    </div>
   </div>
 </div>
 """,
-    unsafe_allow_html=True,
-)
-
+        unsafe_allow_html=True,
+    )
+    
     # ── RESULTS STATE ──────────────────────────────────────────────────────────
     else:
         st.markdown('<div class="stage-scroll">', unsafe_allow_html=True)
